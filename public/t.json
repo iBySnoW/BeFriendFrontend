@@ -1,0 +1,69 @@
+{
+  "common": {
+    "welcome": "Bienvenue",
+    "back": "Retour",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "loading": "Chargement..."
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "success": "Connexion réussie",
+      "error": "Erreur de connexion"
+    },
+    "register": {
+      "title": "Inscription",
+      "name": "Nom",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "S'inscrire",
+      "success": "Inscription réussie",
+      "error": "Erreur d'inscription"
+    }
+  },
+  "groups": {
+    "create": {
+      "title": "Créer un groupe",
+      "name": "Nom du groupe",
+      "description": "Description",
+      "submit": "Créer",
+      "success": "Groupe créé avec succès",
+      "error": "Erreur lors de la création du groupe"
+    }
+  },
+  "events": {
+    "create": {
+      "title": "Créer un événement",
+      "name": "Nom de l'événement",
+      "date": "Date",
+      "location": "Lieu",
+      "description": "Description",
+      "submit": "Créer",
+      "success": "Événement créé avec succès",
+      "error": "Erreur lors de la création de l'événement"
+    }
+  },
+  "expenses": {
+    "add": {
+      "title": "Ajouter une dépense",
+      "amount": "Montant",
+      "description": "Description",
+      "paidBy": "Payé par",
+      "submit": "Ajouter",
+      "success": "Dépense ajoutée avec succès",
+      "error": "Erreur lors de l'ajout de la dépense"
+    }
+  },
+  "notifications": {
+    "mark_read": {
+      "success": "Notification marquée comme lue",
+      "error": "Erreur lors du marquage de la notification"
+    }
+  }
+}

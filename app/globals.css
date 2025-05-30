@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: #181C27;
+
+    --card: #fff;
+    --card-foreground: #181C27;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 16 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 16 100% 50%;
+
+    --radius: 0.5rem;
+
+    --text: #181C27;
+  }
+
+  .dark {
+    --background: #181C27;
+    --foreground: #F5F5F5;
+
+    --card: #23263A;
+    --card-foreground: #F5F5F5;
+
+    --popover: 222.2 47.4% 11.2%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 16 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 16 100% 50%;
+
+    --text: #F5F5F5;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Styles de base */
+/* body {
+  @apply bg-background text-foreground font-poppins;
+} */
+
+/* Styles de composants personnalisés */
+@layer components {
+  .shadow-soft {
+    @apply shadow-md shadow-black/5;https://prismic.io/blog/tailwind-css-darkmode-tutorial
+  }
+s
+  .befriend-card {
+    @apply bg-card text-foreground rounded-xl shadow-soft border border-border p-4;
+  }
+
+  .befriend-button-primary {
+    @apply bg-primary text-primary-foreground rounded-full px-6 py-3 font-medium shadow-md hover:opacity-90 transition-all;
+  }
+
+  .befriend-button-secondary {
+    @apply bg-secondary text-secondary-foreground rounded-full px-6 py-3 font-medium shadow-md hover:opacity-90 transition-all;
+  }
+
+  .befriend-input {
+    @apply bg-background text-foreground border border-border rounded-full px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary;
+  }
+
+  .befriend-section-title {
+    @apply text-2xl font-bold text-foreground font-fredoka mb-4;
+  }
+
+  .befriend-nav-active {
+    @apply text-primary;
+  }
+
+  .befriend-nav-inactive {
+    @apply text-muted-foreground;
+  }
+
+  /* Classes spécifiques pour les interfaces de chat */
+  .chat-message-mine {
+    @apply bg-primary text-primary-foreground rounded-2xl p-3;
+  }
+
+  .chat-message-others {
+    @apply bg-card text-foreground rounded-2xl p-3;
+  }
+
+  .chat-timestamp {
+    @apply text-xs text-muted-foreground;
+  }
+
+  /* Classes pour les écrans d'onboarding */
+  .onboarding-icon-container {
+    @apply w-32 h-32 mx-auto bg-primary/10 rounded-full flex items-center justify-center;
+  }
+
+  .onboarding-icon {
+    @apply w-16 h-16 text-primary;
+  }
+
+  .onboarding-title {
+    @apply text-4xl font-bold mb-4 text-foreground font-fredoka;
+  }
+
+  .onboarding-text {
+    @apply text-xl text-muted-foreground mb-8 font-poppins;
+  }
+
+  .mobile-container {
+    @apply max-w-md mx-auto bg-background relative;
+  }
+
+  .page-container {
+    @apply p-4 pb-24;
+  }
+
+  .section-container {
+    @apply mb-6;
+  }
+
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-background border-t border-border flex items-center justify-around py-2 safe-bottom text-foreground;
+  }
+
+  .top-nav {
+    @apply sticky top-0 z-10 bg-background border-b border-border flex items-center justify-between p-4 safe-top text-foreground;
+  }
+}
+
+.befriend-gradient {
+  background: linear-gradient(145deg, #ff6b48, #ffc355);
+}
+
+.font-fredoka {
+  font-family: var(--font-fredoka);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+/* Classes utilitaires personnalisées */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
+  }
+}
