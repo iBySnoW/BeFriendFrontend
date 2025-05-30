@@ -120,8 +120,8 @@ export function EventForm({ groupId, onSuccess }: EventFormProps) {
         title,
         description: description || undefined,
         location: location || undefined,
-        start_date: dateTimeRange.from.date,
-        end_date: dateTimeRange.to?.date,
+        start_date: dateTimeRange?.from.date || new Date(),
+        end_date: dateTimeRange?.to?.date || new Date(),
         group_id: Number(groupId),
       }
 
